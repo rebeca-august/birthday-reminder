@@ -1,7 +1,11 @@
-import { identifier } from '@babel/types'
 import React from 'react'
+import { Person } from './App'
 
-const List = ({ people }) => {
+type Props = {
+  people: Person[]
+}
+
+const List = ({ people }: Props) => {
   return (
     <>
       {people.map((person) => {

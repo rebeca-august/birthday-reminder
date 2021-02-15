@@ -1,8 +1,17 @@
 import React, { useState } from 'react'
 import data from './data'
 import List from './List'
-function App() {
-  const [people, setPeople] = useState(data)
+
+export type Person = {
+  id: number
+  name: string
+  age: number
+  image: string
+}
+
+const App = () => {
+  const [people, setPeople] = useState<Person[]>(data)
+
   return (
     <main>
       <section className="container">
